@@ -28,6 +28,160 @@
         Users will be able to sign up, update their personal information, and
         create a list of their favorite movies.
       </p>
+      <h3>API Endpoints and requests METHODS</h3>
+      <table>
+        <tr>
+          <th>REQUEST</th>
+          <th>URL (Endpoint)</th>
+          <th>HTTP Method</th>
+          <th>Query Parameters</th>
+          <th>Request Body Data Format</th>
+          <th>Response Body Data Format</th>
+          <th>Req/Res Example</th>
+        </tr>
+        <tr>
+          <td>Return a list of ALL movies to the user</td>
+          <td>/movies</td>
+          <td>GET</td>
+          <td>None</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>
+            { title: 'Groundhog Day', director: 'Harold Ramis' },<br />
+            { title: 'Fear and Loathing in Las Vegas', director: 'Terry Gilliam'
+            },<br />
+            { title: 'The Big Lebowski', director: 'Joel Coen' },
+            <br />
+            <br />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Return data (description, genre, director, image URL, whether it’s
+            featured or not) about a single movie by title to the user
+          </td>
+          <td>/movies/:Title</td>
+          <td>GET</td>
+          <td>Use "_" for spaces (when needed)</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>
+            {Title: Fear and Loathing in Las Vegas, <br />
+            Genre: comedy-drama , <br />
+            Synopsis: An oddball journalist and his psychopathic lawyer travel
+            to Las Vegas for a series of psychedelic escapades.<br />Director:
+            Terry Gilliam ,<br />_id: "xxxx" ,<br />Year: 1998} <br />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Return data about a genre (description) by name/title (e.g.,
+            “Thriller”)
+          </td>
+          <td>/movies/Genres/:Title</td>
+          <td>GET</td>
+          <td>Use "_" for spaces (when needed)</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>
+            {Fantasy. Description: Fantasy films are films that belong to the
+            fantasy genre with fantastic themes, usually magic, supernatural
+            events, mythology, folklore, or exotic fantasy worlds. The genre is
+            considered a form of speculative fiction alongside science fiction
+            films and horror films, although the genres do overlap.}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Return data about a director (bio, birth year, death year) by name
+          </td>
+          <td>/movies/Directors/:Name</td>
+          <td>GET</td>
+          <td>Use "_" for spaces (when needed)</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>
+            {Andrei Arsenyevich Tarkovsky: (4 April 1932 - 29 December 1986)
+            Soviet Russian filmmaker, theatre director, writer, and film
+            theorist. He is widely considered one of the greatest and most
+            influential directors in the history of Russian and world
+            cinema.}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>Allow new users to register</td>
+          <td>/users</td>
+          <td>POST</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>JSON</td>
+          <td>
+            {FavoriteMovies: [ ],<br />_id: 6gdvasuXXXX,<br />Username:
+            jackblack,<br /><br />Password: crazypass,<br /><br />Email:
+            jackblack@gmail.com,<br /><br />Birthday:
+            2012-12-12T00:00:00.0000}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>Allow users to update their user info (username)</td>
+          <td>/users/:username</td>
+          <td>PUT</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>JSON</td>
+          <td>
+            {FavoriteMovies: [ Groundhog Day ],<br />_id: 6gdvasuXXXX,<br />Username:
+            jackblackReloaded,<br /><br />Password: crazypass,<br /><br />Email:
+            jackblack@gmail.com,<br /><br />Birthday:
+            2012-12-12T00:00:00.0000}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Allow users to add a movie to their list of favorites (showing only
+            a text that a movie has been added)
+          </td>
+          <td>/users/:username/movies/:movieID</td>
+          <td>POST</td>
+          <td>None</td>
+          <td>JSON</td>
+          <td>Message</td>
+          <td>
+            {FavoriteMovies: [<br />5febsfq24305bwe035g9873,<br />5febsfq24305bwe035g783,
+            <br />5feb583nd95g4977<br />],<br /><br />Username:
+            jackblackReloaded}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Allow users to remove a movie from their list of favorites (showing
+            only a text that a movie has been removed)
+          </td>
+          <td>/users/:username/movies/:movieID</td>
+          <td>DELETE</td>
+          <td>None</td>
+          <td>None</td>
+          <td>Message</td>
+          <td>
+            {<br />FavoriteMovies: [<br />5febsfq24305bwe035g7892,<br />5febsfq24305bwe035g783<br />],<br /><br />Username:
+            jackblackReloaded}<br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Allow existing users to deregister (showing only a text that a user
+            email has been removed)
+          </td>
+          <td>/users/:username</td>
+          <td>DELETE</td>
+          <td>None</td>
+          <td>None</td>
+          <td>Message</td>
+          <td>jackblackReloaded was deleted.</td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
