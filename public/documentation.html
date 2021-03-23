@@ -80,7 +80,7 @@
             Return data about a genre (description) by name/title (e.g.,
             “Thriller”)
           </td>
-          <td>/movies/Genres/:Title</td>
+          <td>/movies/Genres/:Name</td>
           <td>GET</td>
           <td>Use "_" for spaces (when needed)</td>
           <td>None</td>
@@ -126,7 +126,7 @@
         </tr>
         <tr>
           <td>Allow users to update their user info (username)</td>
-          <td>/users/:username</td>
+          <td>/users/:Username</td>
           <td>PUT</td>
           <td>None</td>
           <td>JSON</td>
@@ -143,7 +143,7 @@
             Allow users to add a movie to their list of favorites (showing only
             a text that a movie has been added)
           </td>
-          <td>/users/:username/movies/:movieID</td>
+          <td>/users/:Username/movies/:movieID</td>
           <td>POST</td>
           <td>None</td>
           <td>JSON</td>
@@ -159,7 +159,7 @@
             Allow users to remove a movie from their list of favorites (showing
             only a text that a movie has been removed)
           </td>
-          <td>/users/:username/movies/:movieID</td>
+          <td>/users/:Username/movies/:movieID</td>
           <td>DELETE</td>
           <td>None</td>
           <td>None</td>
@@ -174,7 +174,7 @@
             Allow existing users to deregister (showing only a text that a user
             email has been removed)
           </td>
-          <td>/users/:username</td>
+          <td>/users/:Username</td>
           <td>DELETE</td>
           <td>None</td>
           <td>None</td>

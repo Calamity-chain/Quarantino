@@ -1,0 +1,4 @@
+{"_id":{"$oid":"6054f3f1440e9a704ad9f29f"},"Name":"Jack Black","Password":"crazypass!","Email":"jackblack@gmail.com","Birthday":{"$date":"1912-12-12T00:00:00.000Z"},"FavoriteMovies":[{"$oid":"6054efa7440e9a704ad9f29d"},{"$oid":"6054eec7440e9a704ad9f29c"}]}
+{"_id":{"$oid":"6054f461440e9a704ad9f2a0"},"Name":"Heavy Head","Password":"supertired2.0","Email":"heavyyh@yahoo.fr","Birthday":{"$date":"1990-06-02T00:00:00.000Z"},"FavoriteMovies":[{"$oid":"6054ecf1440e9a704ad9f29b"}]}
+{"_id":{"$oid":"6054f4bc440e9a704ad9f2a1"},"Name":"Billie","Password":"film000love","Birthday":{"$date":"1963-02-20T00:00:00.000Z"},"FavoriteMovies":[{"$oid":"6054eec7440e9a704ad9f29c"},{"$oid":"6054e3e2440e9a704ad9f295"},{"$oid":"6054e8cc440e9a704ad9f299"}]}
+{"_id":{"$oid":"6054f53c440e9a704ad9f2a2"},"Name":"Pascal le Chantre","Password":"heureuxcommeunpinson\u003c3","Birthday":{"$date":"2001-09-03T00:00:00.000Z"},"FavoriteMovies":[{"$oid":"6054e7ba440e9a704ad9f298"}]}
