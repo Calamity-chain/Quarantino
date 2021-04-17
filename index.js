@@ -10,7 +10,9 @@ const cors = require('cors');
 
 // TO CREATE A LIST OF ALLOWED DOMAINS use this :
 
-let allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234' ];
+const allowedOrigins = ['*' ]; // allow all origins
+
+// const allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234' ];
 
 
 
@@ -32,6 +34,7 @@ app.use(morgan("common"));
 let auth = require('./auth')(app);
 
 //cors security
+
 app.use(cors({
   origin: (origin, callback) => {
     if(!origin) return callback(null, true);
@@ -71,7 +74,7 @@ app.get("/movies", (req, res) => {
 app.get("/movies/:Title", passport.authenticate('jwt', { session: false}), (req, res) => {
   Movies.findOne({ Title : req.params.Title })
   .then((movie) => {
-    res.status(201).json(movie);
+    res.status(200).json(movie);
   })
   .catch((err) => {
     console.error(err);
@@ -83,7 +86,7 @@ app.get("/movies/:Title", passport.authenticate('jwt', { session: false}), (req,
 app.get("/movies/genres/:Name", passport.authenticate('jwt', { session: false}), (req, res) => {
   Movies.findOne({ 'Genre.Name': req.params.Name }, 'Genre')
   .then((genre) => {
-    res.status(201).json(genre);
+    res.status(200).json(genre);
   })
   .catch((err) => {
     console.error(err);
@@ -95,7 +98,7 @@ app.get("/movies/genres/:Name", passport.authenticate('jwt', { session: false}),
 app.get("/directors/:Name", passport.authenticate('jwt', { session: false}), (req, res) => {
   Movies.findOne({ 'Director.Name' : req.params.Name })
   .then((director) => {
-    res.status(201).json(director.Director);
+    res.status(200).json(director.Director);
   })
   .catch((err) => {
     console.error(err);
@@ -108,7 +111,8 @@ app.get("/directors/:Name", passport.authenticate('jwt', { session: false}), (re
 app.get('/users', (req, res) => {
   Users.find()
     .then((users) => {
-      res.status(201).json(users);
+      // users.forEach (user => user.Password = 'xxxxxx');
+      res.status(200).json(users);
     })
     .catch((err) => {
       console.error(err);
