@@ -10,7 +10,8 @@ const cors = require('cors');
 
 // TO CREATE A LIST OF ALLOWED DOMAINS use this :
 
-// let allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234' ];
+let allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234' ];
+
 
 
 const { check, validationResult } = require('express-validator');  
