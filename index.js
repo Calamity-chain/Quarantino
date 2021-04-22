@@ -29,8 +29,6 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(morgan("common"));
 
-let auth = require('./auth')(app);
-
 //cors security
 
 app.use(cors({
@@ -43,6 +41,9 @@ app.use(cors({
     return callback(null, true);
   }
 }));
+
+let auth = require('./auth')(app);
+
 
 //General ERROR HANDLING
 app.use((err, req, res, next) => {
