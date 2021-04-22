@@ -29,7 +29,10 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(morgan("common"));
 
-//cors security
+//CORS SECURITY
+
+ /* To allow all origins: */
+ //app.use(cors());
 
 app.use(cors({
   origin: (origin, callback) => {
