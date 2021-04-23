@@ -9,7 +9,7 @@ const express = require("express");
 const cors = require('cors');
 
 // TO CREATE A LIST OF ALLOWED DOMAINS use this :
-// const allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234' ];
+// const allowedOrigins = ['http://localhost:8080', 'https://quarantinoflix.herokuapp.com/', 'http://localhost:1234', https://quarantinoflix.netlify.app ];
 
 // allow all origins
 // const allowedOrigins = ['*' ]; 
