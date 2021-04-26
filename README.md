@@ -21,6 +21,7 @@ Users will be able to sign up, update their personal information, and create a l
 + Allow existing users to deregister (showing only a text that a user email has been removed) <br>
 
 # Quarantino API
+is deployed with Heroku :
  https://quarantinoflix.herokuapp.com/
 
 
