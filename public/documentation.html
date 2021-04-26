@@ -40,6 +40,29 @@
           <th>Req/Res Example</th>
         </tr>
         <tr>
+          <td>Allow users to log in</td>
+          <td>/login</td>
+          <td>POST</td>
+          <td>None</td>
+          <td>Params Key-Value</td>
+          <td>JSON</td>
+          <td>{
+            "user": {<br />
+                "FavoriteMovies": [
+                    "6054ecf1440e9a704ad9f29b"
+                ],<br />
+                "_id": "607c4780f17cf70015232f92", <br />
+                "Username": "Loulou", <br />
+                "Password": "$2b$10$QejFWt7xNiLyNeBSpogFkekNH/8L4nLawy3i3rpfp6vtXqKDfVhdu",<br />
+                "Email": "lou@lou.com",<br />
+                "Birthday": "1960-03-14T00:00:00.000Z",<br />
+                "__v": 0<br />
+            },<br />
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJGYXZvcml0ZU1vdmllcyI6WyI2MDU0ZWNmMTQ0MGU5YTcwNGFkOWYyOWIiXSwiX2lkIjoiNjA3YzQ3ODBmMTdjZjcwMDE1MjMyZjkyIiwiVXNlcm5hbWUiOiJMb3Vsb3UiLCJQYXNzd29yZCI6IiQyYiQxMCRRZWpGV3Q3eE5pTHlOZUJTcG9nRmtla05ILzhMNG5MYXd5M2kzcnBmcDZ2dFhxS0RmVmhkdSIsIkVtYWlsIjoibG91QGxvdS5jb20iLCJCaXJ0aGRheSI6IjE5NjAtMDMtMTRUMDA6MDA6MDAuMDAwWiIsIl9fdiI6MCwiaWF0IjoxNjE5NDQyNzk0LCJleHAiOjE2MjAwNDc1OTQsInN1YiI6IkxvdWxvdSJ9.BM6popGaB12NrXjXwg-MqiyRcJU-mFOY_rexy5joJv8"
+        }<br /><br />
+          </td>
+        </tr>
+        <tr>
           <td>Return a list of ALL movies to the user</td>
           <td>/movies</td>
           <td>GET</td>
