@@ -1,6 +1,7 @@
 # Quarantino 
 the movie web-app for quarantined people
 You'll find here some documentation about the project
+https://quarantinoflix.herokuapp.com/documentation.html
 
 <h1> Project description </h1>
 The Quarantino web application will provide users with
@@ -20,6 +21,7 @@ Users will be able to sign up, update their personal information, and create a l
 + Allow existing users to deregister (showing only a text that a user email has been removed) <br>
 
 # Quarantino API
+is deployed with Heroku :
  https://quarantinoflix.herokuapp.com/
 
 
